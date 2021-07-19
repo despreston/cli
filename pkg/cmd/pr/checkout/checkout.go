@@ -67,7 +67,7 @@ func NewCmdCheckout(f *cmdutil.Factory, runF func(*CheckoutOptions) error) *cobr
 	cmd.Flags().BoolVarP(&opts.RecurseSubmodules, "recurse-submodules", "", false, "Update all submodules after checkout")
 	cmd.Flags().BoolVarP(&opts.Force, "force", "f", false, "Reset the existing local branch to the latest state of the pull request")
 	cmd.Flags().BoolVarP(&opts.Detach, "detach", "", false, "Checkout PR with a detached HEAD")
-	cmd.Flags().StringVarP(&opts.Local, "local", "l", "", "Rename branch during checkout")
+	cmd.Flags().StringVarP(&opts.Local, "branch", "b", "", "Rename branch during checkout")
 
 	return cmd
 }
